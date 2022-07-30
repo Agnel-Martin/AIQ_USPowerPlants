@@ -1,0 +1,21 @@
+AmCharts
+https://www.amcharts.com/docs/v5/charts/map-chart/
+https://www.youtube.com/watch?v=-8LhtD3seDI
+
+Postgres Pass: Postgres
+
+To import CSV to Postgres:
+https://hevodata.com/learn/postgresql-import-csv/
+
+PERN Stack Dev:
+https://www.youtube.com/watch?v=ldYcgPKEZC8
+
+Angular HTTP:
+https://www.youtube.com/watch?v=F_JGYCu2Djg
+https://www.youtube.com/watch?v=_05v0mrNLh0
+https://www.youtube.com/watch?v=k8qDGBFPfXk
+https://www.youtube.com/watch?v=6N_1vUPlhvk
+
+Git:
+https://www.simplilearn.com/tutorials/git-tutorial/git-installation-on-windows
+https://www.youtube.com/watch?v=qavL9aNnBeI

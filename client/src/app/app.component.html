@@ -1,0 +1,41 @@
+<script src="//cdn.amcharts.com/lib/5/index.js"></script>
+<script src="//cdn.amcharts.com/lib/5/map.js"></script>
+<script src="//cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="//cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<div id="chartdiv"></div>
+<div style="font-family: Arial; text-align: center;">HI! WELCOME TO THE US POWER PLANTS WEBSITE :)</div>
+
+<input id="TopNInput" #TopNInput type="number" min="1" value="1"/>
+
+<button id="TopNButton" (click)="onGetTopNPlants(TopNInput.value)">Get All Top(N) Plants</button>
+
+<select id="StateList" #StateList style="padding: 6.5px;" >
+    <option *ngFor="let state of States" value="{{ state.PSTATABB }}">{{ state.PSTATABB }}</option>
+</select>
+
+<button id="TopNButton" (click)="onGetStateTopNPlants(StateList.value, TopNInput.value)">Get Top(N) Plants By State</button>
+
+<div>
+    <table>
+        <thead>
+            <tr style="text-align: center; font-family: Arial;">
+                <th style="padding-left:15px;">SEQPLT20</th>
+                <th style="padding-left:15px;">PSTATABB</th>
+                <th style="padding-left:15px;">PNAME</th>
+                <th style="padding-left:15px;">LAT</th>
+                <th style="padding-left:15px;">LON</th>
+                <th style="padding-left:15px;">PLNGENAN (MWh)</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let Plant of topNPlants">
+            <tr style="text-align: center; font-family: Arial; padding-left:15px;">
+                <td style="padding-left:15px;">{{ Plant.SEQPLT20 }}</td>
+                <td style="padding-left:15px;">{{ Plant.PSTATABB }}</td>
+                <td style="padding-left:15px;">{{ Plant.PNAME }}</td>
+                <td style="padding-left:15px;">{{ Plant.LAT }}</td>
+                <td style="padding-left:15px;">{{ Plant.LON }}</td>
+                <td style="padding-left:15px;">{{ Plant.PLNGENAN }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
